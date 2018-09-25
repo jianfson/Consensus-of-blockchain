@@ -1,0 +1,12 @@
+[Unit]
+Description=ora fast setup daemon
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/fastsetupd
+Type=simple
+Restart=on-failure
+RestartSec=20s
+
+[Install]
+WantedBy=multi-user.target
